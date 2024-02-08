@@ -1,0 +1,8 @@
+本书与FFmpeg有关的C代码都基于FFmpeg 5.1.2编写，其中前10章的C/C++代码在Linux（包括EulerOS和CentOS）与Windows（包括Win10和Win11）上面编译和调试通过；第11章的程序代码采用C++编写，并在Qt 6.5.2上面编译和调试通过；第12章的App代码采用Java与C++编写，并在Android Studio Dolphin（小海豚版本）上面编译和调试通过。
+随书源码分成三大块：基于Linux环境的C/C++代码、基于Qt的桌面程序代码、基于Android的APP工程代码，分别说明如下：
+1、基于Linux环境的C/C++代码
+这部分代码位于chapter01～chapter10目录下。对于Linux环境，可将这10个目录复制到/usr/local/src/test路径下；对于Windows环境，可将这10个目录复制到msys64安装路径下面的/usr/local/src/test。
+2、基于Qt的桌面程序代码
+这部分代码位于chapter11目录下，详细的环境说明和导入办法参见该目录下的《第11章Qt工程源码的导入说明.docx》。
+3、基于Android的APP工程代码
+这部分代码位于chapter12目录下，详细的环境说明和导入办法参见该目录下的《第12章App工程源码的导入说明.docx》。

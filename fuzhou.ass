@@ -1,0 +1,18 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: 
+ScriptType: v4.00+
+PlayDepth: 0
+ScaledBorderAndShadow: Yes
+PlayResX: 1440
+PlayResY: 810
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,SimSun,100,&H0066FF66,&H00FFFFFF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,5,0,1,0,0,2,10,10,50,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:06.00,Default,,0,0,0,,{\q0}{\fad(1000,0)}{\kf100}青山{\kf100}云雾{\kf100}散，{\kf100}出海{\kf60}风{\kf140}扬帆
+Dialogue: 0,0:00:06.10,0:00:13.20,Default,,0,0,0,,{\q0}{\kf100}追风{\kf140}弄潮，{\kf80}波澜{\kf100}入海{\kf100}胆气{\kf190}壮
+Dialogue: 0,0:00:13.30,0:00:19.50,Default,,0,0,0,,{\q0}{\fad(0,1000)}{\kf100}启程{\kf100}道路{\kf100}宽，{\kf100}返航{\kf100}花果{\kf100}香

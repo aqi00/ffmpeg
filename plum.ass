@@ -1,0 +1,46 @@
+[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+Title: plum
+ScriptType: v4.00+
+PlayDepth: 0
+ScaledBorderAndShadow: Yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H0000FFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,1,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:20.17,0:00:27.01,Default,,0,0,0,,专辑：《流行的经典》
+Dialogue: 0,0:00:27.03,0:00:33.26,Default,,0,0,0,,真情像草原广阔
+Dialogue: 0,0:00:33.28,0:00:39.35,Default,,0,0,0,,层层风雨不能阻隔
+Dialogue: 0,0:00:39.37,0:00:46.16,Default,,0,0,0,,总有云开 日出时候
+Dialogue: 0,0:00:46.18,0:00:52.16,Default,,0,0,0,,万丈阳光照耀你我
+Dialogue: 0,0:00:52.18,0:00:58.42,Default,,0,0,0,,真情像梅花开过
+Dialogue: 0,0:00:58.44,0:01:04.67,Default,,0,0,0,,冷冷冰雪不能掩没
+Dialogue: 0,0:01:04.69,0:01:07.89,Default,,0,0,0,,就在最冷
+Dialogue: 0,0:01:07.91,0:01:11.30,Default,,0,0,0,,枝头绽放
+Dialogue: 0,0:01:11.32,0:01:17.80,Default,,0,0,0,,看见春天走向你我
+Dialogue: 0,0:01:17.82,0:01:23.70,Default,,0,0,0,,雪花飘飘北风啸啸
+Dialogue: 0,0:01:23.72,0:01:30.13,Default,,0,0,0,,天地一片苍茫
+Dialogue: 0,0:01:30.15,0:01:33.28,Default,,0,0,0,,一剪寒梅
+Dialogue: 0,0:01:33.30,0:01:36.34,Default,,0,0,0,,傲立雪中
+Dialogue: 0,0:01:36.36,0:01:42.69,Default,,0,0,0,,只为伊人飘香
+Dialogue: 0,0:01:42.71,0:01:48.93,Default,,0,0,0,,爱我所爱无怨无悔
+Dialogue: 0,0:01:48.95,0:01:56.95,Default,,0,0,0,,此情（此情）长留（长留）
+Dialogue: 0,0:01:57.04,0:02:02.67,Default,,0,0,0,,心间..........................................
+Dialogue: 0,0:02:02.69,0:02:10.69,Default,,0,0,0,,（Music）
+Dialogue: 0,0:02:26.99,0:02:33.16,Default,,0,0,0,,真情像梅花开过
+Dialogue: 0,0:02:33.18,0:02:39.42,Default,,0,0,0,,冷冷冰雪不能掩没
+Dialogue: 0,0:02:39.44,0:02:42.61,Default,,0,0,0,,就在最冷
+Dialogue: 0,0:02:42.63,0:02:46.03,Default,,0,0,0,,枝头绽放
+Dialogue: 0,0:02:46.05,0:02:52.37,Default,,0,0,0,,看见春天走向你我
+Dialogue: 0,0:02:52.39,0:02:58.60,Default,,0,0,0,,雪花飘飘北风啸啸
+Dialogue: 0,0:02:58.62,0:03:04.97,Default,,0,0,0,,天地一片苍茫
+Dialogue: 0,0:03:04.99,0:03:08.13,Default,,0,0,0,,一剪寒梅
+Dialogue: 0,0:03:08.15,0:03:11.19,Default,,0,0,0,,傲立雪中
+Dialogue: 0,0:03:11.21,0:03:17.50,Default,,0,0,0,,只为伊人飘香
+Dialogue: 0,0:03:17.52,0:03:23.72,Default,,0,0,0,,爱我所爱无怨无悔
+Dialogue: 0,0:03:23.74,0:03:31.74,Default,,0,0,0,,此情（此情）长留（长留）
+Dialogue: 0,0:03:31.84,0:03:37.92,Default,,0,0,0,,心间..........................................
+Dialogue: 0,0:03:37.94,0:03:40.44,Default,,0,0,0,,（Music）

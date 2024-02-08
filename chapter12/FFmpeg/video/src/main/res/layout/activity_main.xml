@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_anative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANative播放"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn_opengl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OpenGL播放"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn_opengles_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看OpenGL ES版本号"
+        android:textSize="17sp" />
+
+</LinearLayout>

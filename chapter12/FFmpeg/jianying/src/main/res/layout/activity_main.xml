@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:textSize="17sp"
+        android:hint="请输入水印文字"
+        android:background="@drawable/editext_selector" />
+
+    <RadioGroup
+        android:id="@+id/rg_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="50dp"
+            android:text="选择字体："
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/rb_songti"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="宋体"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/rb_kaiti"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="楷体"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择视频"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_src"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="未选择视频文件"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加工视频"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_dest"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="未加工视频文件"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放视频"
+        android:textSize="17sp" />
+</LinearLayout>

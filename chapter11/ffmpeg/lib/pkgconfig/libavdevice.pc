@@ -1,0 +1,14 @@
+prefix=/usr/local/ffmpeg
+exec_prefix=${prefix}
+libdir=/usr/local/ffmpeg/lib
+includedir=/usr/local/ffmpeg/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 59.7.100
+Requires: 
+Requires.private: libavfilter >= 8.44.100, libswscale >= 6.7.100, libpostproc >= 56.6.100, libavformat >= 59.27.100, libavcodec >= 59.37.100, libswresample >= 4.7.100, libavutil >= 57.28.100
+Conflicts:
+Libs: -L${libdir}  -lavdevice 
+Libs.private: -lpsapi -lole32 -lstrmiids -luuid -loleaut32 -lshlwapi -lgdi32 -lm -latomic -lvfw32 -LE:/msys64/usr/local/sdl2/lib -lSDL2
+Cflags: -I${includedir}
