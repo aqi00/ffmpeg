@@ -58,8 +58,8 @@ int main(int argc, char **argv) {
         av_log(NULL, AV_LOG_INFO, "video_codec name=%s\n", video_codec->name);
         AVCodecParameters *video_codecpar = video_stream->codecpar;
         // 计算帧率，每秒有几个视频帧
-        int fps = video_stream->r_frame_rate.num/video_stream->r_frame_rate.den;
-        //int fps = av_q2d(video_stream->r_frame_rate);
+        //int fps = video_stream->r_frame_rate.num/video_stream->r_frame_rate.den;
+        int fps = av_q2d(video_stream->r_frame_rate);
         av_log(NULL, AV_LOG_INFO, "video_codecpar bit_rate=%d\n", video_codecpar->bit_rate);
         av_log(NULL, AV_LOG_INFO, "video_codecpar width=%d\n", video_codecpar->width);
         av_log(NULL, AV_LOG_INFO, "video_codecpar height=%d\n", video_codecpar->height);

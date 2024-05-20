@@ -2,6 +2,10 @@
 #include <QDebug>
 #include <thread>
 
+#ifndef _WIN32
+#include <unistd.h>
+#endif
+
 // 构造方法
 VideoDecoder::VideoDecoder(int play_type, const char *video_path, VideoCallBack *callback)
 {
@@ -128,7 +132,7 @@ int VideoDecoder::playVideo()
     av_image_fill_arrays(m_yuv_frame->data, m_yuv_frame->linesize, m_yuv_buffer,
                          yuv_format, width, height, 1);
 
-    int fps = av_q2d(src_video->r_frame_rate); // 帧率
+    int fps = av_q2d(src_video->avg_frame_rate); // 帧率
     int interval = round(1000 / fps); // 根据帧率计算每帧之间的播放间隔
     AVPacket *packet = av_packet_alloc(); // 分配一个数据包
     AVFrame *frame = av_frame_alloc(); // 分配一个数据帧

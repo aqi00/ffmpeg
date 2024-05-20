@@ -326,7 +326,7 @@ int VideoPlayer::thread_work_video(void *arg) {
 
 // 准备视频相关资源
 int VideoPlayer::prepare_video(void) {
-    int fps = av_q2d(src_video->r_frame_rate); // 帧率
+    int fps = av_q2d(src_video->avg_frame_rate); // 帧率
     interval = round(1000 / fps); // 根据帧率计算每帧之间的播放间隔
 
     video_list_lock = SDL_CreateMutex(); // 创建互斥锁，用于调度队列
