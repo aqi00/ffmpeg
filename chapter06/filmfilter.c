@@ -304,14 +304,18 @@ int main(int argc, char **argv) {
         int gap = 20; // 两个方块之间的距离
         int box_count = width/(side+gap); // 小方块的数量
         char film_desc[(box_count+1)*60*2]; // 老电影的过滤字符串
+        char temp_desc[(box_count+1)*60*2];
         // 视频的上下两侧各往外侧延伸出一排黑边
-        snprintf(film_desc, sizeof(film_desc), "pad=w=iw:h=ih+%d:x=0:y=%d:color=black", add_height, add_height/2);
+        snprintf(temp_desc, sizeof(temp_desc), "pad=w=iw:h=ih+%d:x=0:y=%d:color=black", add_height, add_height/2);
+        av_log(NULL, AV_LOG_INFO, "temp_desc: %s\n", temp_desc);
         int i=0;
         while (i <= box_count) { // 往上下两侧新增的黑边添加白色小方块
             int x_pos = gap+i*(side+gap);
             int x_side = x_pos+side>width ? width-x_pos : side;
-            snprintf(film_desc, sizeof(film_desc), "%s,drawbox=x=%d:y=%d:w=%d:h=%d:color=white:t=fill", film_desc, x_pos, gap, side, side);
-            snprintf(film_desc, sizeof(film_desc), "%s,drawbox=x=%d:y=ih-%d:w=%d:h=%d:color=white:t=fill", film_desc, x_pos, side+gap, side, side);
+            snprintf(film_desc, sizeof(film_desc), "%s,drawbox=x=%d:y=%d:w=%d:h=%d:color=white:t=fill", temp_desc, x_pos, gap, side, side);
+            snprintf(temp_desc, sizeof(temp_desc), "%s", film_desc);
+            snprintf(film_desc, sizeof(film_desc), "%s,drawbox=x=%d:y=ih-%d:w=%d:h=%d:color=white:t=fill", temp_desc, x_pos, side+gap, side, side);
+            snprintf(temp_desc, sizeof(temp_desc), "%s", film_desc);
             i++;
         }
         init_filter(film_desc); // 初始化滤镜
