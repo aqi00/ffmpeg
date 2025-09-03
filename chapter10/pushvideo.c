@@ -43,19 +43,25 @@ int main(int argc, char **argv) {
     }
     
     AVFormatContext *out_fmt_ctx; // 输出文件的封装器实例
-    // 分配音视频文件的封装实例（注意第三个参数要填rtsp）
-    ret = avformat_alloc_output_context2(&out_fmt_ctx, NULL, "rtsp", dest_name);
+    // 分配音视频文件的封装实例（注意rtmp协议的第三个参数填flv，rtsp协议的第三个参数填rtsp）
+    if (strstr(dest_name, "rtmp") != NULL) {
+        ret = avformat_alloc_output_context2(&out_fmt_ctx, NULL, "flv", dest_name);
+    } else {
+        ret = avformat_alloc_output_context2(&out_fmt_ctx, NULL, "rtsp", dest_name);
+    }
     if (ret < 0) {
         av_log(NULL, AV_LOG_ERROR, "Can't alloc output_file %s.\n", dest_name);
         return -1;
     }
     av_log(NULL, AV_LOG_INFO, "Success open push url %s.\n", dest_name);
-//    // 打开输出流（注意rtsp推流不要调用avio_open）
-//    ret = avio_open(&out_fmt_ctx->pb, dest_name, AVIO_FLAG_READ_WRITE);
-//    if (ret < 0) {
-//        av_log(NULL, AV_LOG_ERROR, "Can't open output_file %s.\n", dest_name);
-//        return -1;
-//    }
+    // 打开输出流（注意rtsp推流不要调用avio_open，但rtmp推流要调用avio_open）
+    if (strstr(dest_name, "rtmp") != NULL) {
+        ret = avio_open(&out_fmt_ctx->pb, dest_name, AVIO_FLAG_READ_WRITE);
+        if (ret < 0) {
+            av_log(NULL, AV_LOG_ERROR, "Can't open output_file %s.\n", dest_name);
+            return -1;
+        }
+    }
     AVStream *dest_video = NULL;
     if (video_index >= 0) { // 源文件有视频流，就给目标文件创建视频流
         dest_video = avformat_new_stream(out_fmt_ctx, NULL); // 创建数据流
