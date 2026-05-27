@@ -91,6 +91,7 @@ int init_audio_encoder(void) {
         av_log(NULL, AV_LOG_ERROR, "Can't open audio_encode_ctx.\n");
         return -1;
     }
+    audio_encode_ctx->frame_size = audio_decode_ctx->frame_size;
     return 0;
 }
 

@@ -205,8 +205,8 @@ int main(int argc, char **argv) {
     }
 
     AVFrame *swr_frame = av_frame_alloc(); // 分配一个数据帧
-    // 每帧的采样数量（帧大小）。这里要跟原来的音频保持一致
-    swr_frame->nb_samples = audio_decode_ctx->frame_size;
+    // 每帧的采样数量（帧大小）。这里要跟编码器中的音频每帧的采样数量保存一致
+    swr_frame->nb_samples = audio_encode_ctx->frame_size;
     if (swr_frame->nb_samples <= 0) {
         swr_frame->nb_samples = 512;
     }
